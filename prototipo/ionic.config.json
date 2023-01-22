@@ -1,0 +1,10 @@
+{
+  "name": "prototipo",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
