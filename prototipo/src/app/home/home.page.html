@@ -1,4 +1,4 @@
-<ion-header #header class="toolbar-background">
+<ion-header #header color="primary">
   
   <ion-buttons >
     <ion-menu-button id="main-content"></ion-menu-button>
@@ -16,9 +16,13 @@
 </ion-menu>
 
 
-<ion-content class="ion-padding" scrollEvents="true" appHideHeader [header]="header">
+<ion-content scrollEvents="true" appHideHeader [header]="header">
+  
+  <div class="header-background" >
+    <ion-searchbar color="teste" class="searchbar-home" animated="true" placeholder="Municípios Conveniados" ></ion-searchbar>
+  </div>
 
-  <ion-searchbar animated="true" placeholder="Municípios Conveniados"></ion-searchbar>
+  <div class="ion-padding">
 
   <ion-list lines="full">
 
@@ -201,5 +205,5 @@
     </ion-grid>
   
   </ion-list>
-
+</div>
 </ion-content>
