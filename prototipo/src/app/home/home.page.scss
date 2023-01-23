@@ -10,37 +10,60 @@
   top: 50%;
   transform: translateY(-50%);
 }
-h1, h3, p {
+
+h1,
+h3,
+p {
   text-align: center;
 }
 
-ion-header {
-  background-color: red;
+ion-header, ion-toolbar, .menu-header {
+  color: white;
+  background-image: linear-gradient(to right, rgb(128, 0, 0) , rgb(211, 0, 0));  
 }
---ion-color-primary {
-  color: rgba(255, 0, 0, 0.3);
-  background-color: rgba(255, 0, 0, 0.3);
+
+.fixed div {
+  height: 200px;
+}
+
+p.cat-muni {
+  display: block;
 }
 .searchbar-home {
   color: white;
   padding: 20px;
-  top: 130px;
+  top: 150px;
+}
+
+ion-list, ion-item {
+  top: 10px;
+}
+
+.desc {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .header-background {
-  background-image: url('https://www.stockvault.net/data/2020/11/21/280975/preview16.jpg')!important;
+  background-image: linear-gradient(to right, rgb(128, 0, 0) , rgb(211, 0, 0));  
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 230px;
 }
+
 
 
 h2 {
   font-size: 20px;
 }
 
-.fixed{
+ion-item {
+  display: block;
+}
+
+.fixed, ion-avatar {
+  color: white;
   overflow: scroll;
   white-space: nowrap;
 }
@@ -51,18 +74,27 @@ h2 {
 
 .fixed ion-avatar ion-icon {
   height: 80px;
-  width: 80px;
+  width: 80px;  
+  padding-top: 30%;
+  padding-right: 20%;
+  padding-left: 20%;
 }
 
-ion-content{ 
-  font-family:Varela !important;
- 
+.span-desc {
+  color: white;
+  font-size: 20px;
+}
+
+ion-content {
+  font-family: Varela !important;
+
 }
 
 ion-avatar {
-  --border-radius: 4px;
-  height: 130px;
+  --border-radius: 9px;
+  height: 140px;
   width: 130px;
+  
 }
 
 .fixed div {
@@ -87,6 +119,22 @@ ion-avatar {
   color: #8c8c8c;
 
   margin: 0;
+}
+
+.fixed div ion-item ion-avatar {
+  background-image: linear-gradient(to right, rgb(128, 0, 0) , rgb(211, 0, 0));  
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fixed div ion-item ion-avatar ion-icon {
+  height: 50px;
+  margin: 0 auto;
+  width: 50%;
+
 }
 
 #container a {
