@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LojasPageRoutingModule } from './lojas-routing.module';
 
 import { LojasPage } from './lojas.page';
+import { FiltroPipe } from '../pipes/filtro.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LojasPageRoutingModule
+    LojasPageRoutingModule, 
   ],
-  declarations: [LojasPage]
+  declarations: [LojasPage, FiltroPipe]
 })
 export class LojasPageModule {}
