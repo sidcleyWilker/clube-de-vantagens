@@ -12,7 +12,33 @@
       <ion-title>Clube de Vantagens</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">Itens a serem adicionados ao menu.</ion-content>
+  <ion-content >
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-title>Perfil</ion-title>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="star-outline"></ion-icon>
+        <ion-title>Favoritos</ion-title>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-title>Notificações</ion-title>
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+  
+  <ion-footer >
+    <ion-list>
+      <ion-item>
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <ion-title>Sobre</ion-title>
+      </ion-item>
+    </ion-list>
+  </ion-footer>
+
 </ion-menu>
 
 
@@ -150,54 +176,45 @@
       <div class="fixed">
         <div>
           <ion-item>
-            <ion-avatar>
+            <ion-avatar [routerLink]="['/lojas']">
               <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
+              <span class="afogados">Afogados</span>
             </ion-avatar>
           </ion-item>
         </div>
 
         <div>
           <ion-item>
-            <ion-avatar>
+            <ion-avatar [routerLink]="['/lojas']">
               <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
+              <span class="sao-jose" >São José</span>
             </ion-avatar>
           </ion-item>
         </div>
 
         <div>
           <ion-item>
-            <ion-avatar>
+            <ion-avatar [routerLink]="['/lojas']">
               <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
+              <span class="tabira">Tabira</span>
             </ion-avatar>
           </ion-item>
         </div>
 
         <div>
           <ion-item>
-            <ion-avatar>
+            <ion-avatar [routerLink]="['/lojas']">
               <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
+              <span class="iguaracy">Iguaracy</span>
             </ion-avatar>
           </ion-item>
         </div>
 
         <div>
           <ion-item>
-            <ion-avatar>
+            <ion-avatar [routerLink]="['/lojas']">
               <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar>
-              <ion-icon name="business-outline"></ion-icon>
-              <span class="span-desc">Município</span>
+              <span class="tuparetama">Tuparetama</span>
             </ion-avatar>
           </ion-item>
         </div>
