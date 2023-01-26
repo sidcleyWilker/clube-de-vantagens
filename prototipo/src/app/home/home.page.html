@@ -44,9 +44,21 @@
 
 <ion-content scrollEvents="true" appHideHeader [header]="header">
 
-  <div class="header-background" >
-    
-  </div>
+  <ion-slides class="header-background" pager loop [options]="slideOptsOne">
+      <ion-slide>
+        <img src="https://maispajeu.com.br/wp-content/uploads/2023/01/Clube-de-Vantagens-Mais-Pajeu.jpeg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://maispajeu.com.br/wp-content/uploads/2021/04/12-400x400.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://maispajeu.com.br/wp-content/uploads/2021/11/Banner-Quadrado-Pernambuco-Esportes.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://maispajeu.com.br/wp-content/uploads/2022/02/Banner-quadrad-Atel-Fev.png" alt="">
+      </ion-slide>
+  </ion-slides>
+  
   <ion-searchbar color="light" animated="true" placeholder="O que você está buscando?"></ion-searchbar>
   <div>
     <ion-list lines="full">
