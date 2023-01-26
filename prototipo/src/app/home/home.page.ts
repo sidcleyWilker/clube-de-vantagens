@@ -1,5 +1,8 @@
+import { Loja } from './../../models/loja.model';
+import { Categoria } from './../../models/categoria.model';
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { DataBase } from 'src/data-base-teste/database';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +11,25 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
+  categorias: Categoria[] = [];
+  dataBase: DataBase = new DataBase();
 
-  navigatedWithParams(){
-    console.log("Teste")
-  }
-
-  navigatedWithObject(){
-    console.log("aaaaa")
-    const params: NavigationExtras = {
-      queryParams: {userid: 123, color: 'green'}
+  constructor(
+    private router: Router,
+    
+    ) {
+      this.categorias = this.dataBase.categorias;
+      console.log(this.categorias)
     }
-    this.router.navigate(['/lojas'], params)
-    console.log("veio")
-  }
 
+  
+    listarLojas(categoria: Categoria){
+      const params: NavigationExtras = {
+        state: {
+          catego: categoria
+        }
+      }
+      this.router.navigate(['/lojas'], params)
+    }
 
 }

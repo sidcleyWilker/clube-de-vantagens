@@ -5,7 +5,7 @@
   </ion-buttons>
 
 </ion-header>
-
+ 
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -58,111 +58,15 @@
       </ion-item>
 
       <div class="fixed">
-        <div>
+        <div *ngFor="let cat of categorias">
           <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Saúde'}" >
-              <ion-icon color="teste1" name="medkit-outline"></ion-icon>
-              <span class="span-desc">Saúde</span>
-
+            <ion-avatar slot="start" (click)="listarLojas(cat)">
+              <ion-icon color="teste1" name="{{cat.iconeCategoria}}"></ion-icon>
+              <span class="span-desc">{{cat.nomeCategoria}}</span>
             </ion-avatar>
           </ion-item>
         </div>
 
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Música'}" >
-              <ion-icon name="headset-outline"></ion-icon>
-              <span class="span-desc">Música</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Mercado'}" >
-              <ion-icon name="storefront-outline"></ion-icon>
-              <span class="span-desc">Mercado</span>
-
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Academia'}" >
-              <ion-icon name="barbell-outline"></ion-icon>
-              <span class="span-desc">Academia</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Serviços'}" >
-              <ion-icon name="construct-outline"></ion-icon>
-              <span class="span-desc">Serviços</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Fotografia'}" >
-              <ion-icon name="images-outline"></ion-icon>
-              <span class="span-desc">Fotografia</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Saúde'}" >
-              <ion-icon name="library-outline"></ion-icon>
-              <span class="span-desc">Livrarias</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Eventos'}" >
-              <ion-icon name="ticket-outline"></ion-icon>
-              <span class="span-desc">Eventos</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Bandas'}" >
-              <ion-icon name="musical-notes-outline"></ion-icon>
-              <span class="span-desc">Bandas</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Educação'}" >
-              <ion-icon name="school-outline"></ion-icon>
-              <span class="span-desc">Educação</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Roupas'}" >
-              <ion-icon name="shirt-outline"></ion-icon>
-              <span class="span-desc">Roupas</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
-        <div>
-          <ion-item>
-            <ion-avatar slot="start" routerLink="/lojas" [queryParams]="{categoria:'Copiadora'}" >
-              <ion-icon name="print-outline"></ion-icon>
-              <span class="span-desc">Copiadora</span>
-            </ion-avatar>
-          </ion-item>
-        </div>
       </div>
 
 
