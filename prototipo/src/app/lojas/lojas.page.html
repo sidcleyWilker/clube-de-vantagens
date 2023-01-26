@@ -12,7 +12,7 @@
 
   <div class="header-desc">
     <ion-text class="text-center">
-      <h3>{{ nome }}</h3>
+      <h3>{{ tes.catego.nomeCategoria }}</h3>
     </ion-text>
 
     <ion-searchbar (ionChange)="buscar($event)" color="teste" animated="true" placeholder="Buscar Lojas"></ion-searchbar>
@@ -21,22 +21,16 @@
 
 
   <ion-list>
-    <ion-item *ngFor="let loja of lojas | filtro: textoBuscar" >
+    <ion-item *ngFor="let loja of tes.catego.lojas | filtro: textoBuscar" >
       
       <ion-thumbnail item-left>
         <img
-          src="{{loja.loja.img}}">
+          src="{{loja.foto}}">
       </ion-thumbnail>
       <ion-label>
-        <h2>{{ loja.loja.nome }}</h2>
+        <h2>{{ loja.nome }}</h2>
         <p><ion-icon name="pricetags-outline"></ion-icon>
-          Descontos de até {{ loja.loja.desconto }}, confira!
-        </p>
-        <p><ion-icon name="location-outline"></ion-icon>
-          Endereço: {{ loja.loja.endereco }}
-        </p>
-        <p><ion-icon name="call-outline"></ion-icon>
-          Número para contato: {{ loja.loja.numero }}
+          Descontos de até {{ loja.descontoo }}, confira!
         </p>
       </ion-label>
     </ion-item>
