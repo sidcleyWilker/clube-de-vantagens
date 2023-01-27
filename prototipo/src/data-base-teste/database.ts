@@ -1,8 +1,10 @@
 import { Loja } from './../models/loja.model';
 import { Categoria } from './../models/categoria.model';
 import { Endereco } from './../models/endereco.model';
+import { Municipio } from 'src/models/municipio.model';
 export class DataBase {
 
+    municipios: Municipio[] = [];
     categorias: Categoria[] = []
     lojas: Loja[] = []
     enderecos: Endereco[] = []
@@ -11,6 +13,7 @@ export class DataBase {
         this.preencherCategorias();
         this.cadastrarLoja();
         this.addLojasAsCategorias();
+        this.preencherMunicipio();
     }
 
     addLojasAsCategorias(): void {
@@ -35,12 +38,28 @@ export class DataBase {
         this.categorias.push(this.criarCategoria("print-outline","Copiadora"));
     }
 
+    preencherMunicipio(): void {
+        this.municipios.push(this.criarMunicipio("business-outline","Afogados da Ingazeira - PE"));
+        this.municipios.push(this.criarMunicipio("business-outline","São José do Egito - PE"));
+        this.municipios.push(this.criarMunicipio("business-outline","Tabira - PE"));
+        this.municipios.push(this.criarMunicipio("business-outline","Iguaracy - PE"));
+        this.municipios.push(this.criarMunicipio("business-outline","Tuparetama - PE"));
+    }
+
     criarCategoria(icone: string, nome: string): Categoria {
         return {
             nomeCategoria: nome,
             iconeCategoria: icone,
             lojas:  []
         };
+    }
+
+    criarMunicipio(icone: string, nome: string): Municipio {
+        return {
+            nomeMunicipio: nome,
+            iconeMunicipio: icone,
+            lojas: []
+        }
     }
 
     //nome: string, foto: string, endereco: Endereco, desconto: number, categoria: Categoria
@@ -129,4 +148,15 @@ export class DataBase {
             comoChegar: "https://goo.gl/maps/KFfH2oxbnggMwZvh9" 
         };
     }
+
+    buscarLoja(nomeLoja: any): Loja {
+        const busca = this.lojas.find(x => x.nome === nomeLoja as string);
+        if (!busca){
+            throw new Error('Loja não encontrada.');
+        }else {
+            return busca;
+        }
+        
+    }
+
 }

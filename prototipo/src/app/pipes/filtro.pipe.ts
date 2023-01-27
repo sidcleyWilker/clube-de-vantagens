@@ -8,19 +8,17 @@ export class FiltroPipe implements PipeTransform {
   listaFiltrada: any;
 
   transform(lista: any[], texto: string): any {
-    
-    if (texto === ''){
+
+    if (texto === '') {
       return lista;
-      
-    }else {
+    } else {
       texto = texto.toLowerCase();
       this.listaFiltrada = lista.filter(item => {
-        return item.loja.nome.toLowerCase().includes( texto );
+        return item.nome.toLowerCase().includes(texto);
       });
       console.log(this.listaFiltrada);
       return this.listaFiltrada;
-  }
-    
+    }
   }
 
 }
