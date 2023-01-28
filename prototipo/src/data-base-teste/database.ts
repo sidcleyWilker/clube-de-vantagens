@@ -40,13 +40,26 @@ export class DataBase {
     }
 
     preencherMunicipio(): void {
-
-        this.municipios.push(this.criarMunicipio("business-outline", "Afogados da Ingazeira - PE",));
-        this.municipios.push(this.criarMunicipio("business-outline", "São José do Egito - PE"));
-        this.municipios.push(this.criarMunicipio("business-outline", "Tabira - PE"));
-        this.municipios.push(this.criarMunicipio("business-outline", "Iguaracy - PE"));
-        this.municipios.push(this.criarMunicipio("business-outline", "Tuparetama - PE"));
-
+        this.municipios.push(this.criarMunicipio("business-outline", "Afogados da Ingazeira"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Serra Talhada"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Arcoverde"));
+        this.municipios.push(this.criarMunicipio("business-outline", "São José do Egito"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Recife"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Tabira"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Triunfo"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Carnaíba"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Flores"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Iguaracy"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Tuparetama"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Quixaba"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Ingazeira"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Itapetim"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Brejinho"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Santa Terezinha"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Solidão"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Santa Cruz da Baixa Verde"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Calumbi"));
+        this.municipios.push(this.criarMunicipio("business-outline", "Sertãnia"));
     }
 
     addLojasAoMunicipio(): void{
