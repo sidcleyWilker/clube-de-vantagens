@@ -19,10 +19,13 @@ export class HomePage {
     slidesPerView: 1,
     autoplay:true
    };
-
+   isModalOpen = false;
+   loja: any;
+   textoBuscar = '';
    categorias: Categoria[] = [];
    dataBase: DataBase = new DataBase();
    municipios: Municipio[] = [];
+   lojas: Loja[] = [];
 
   constructor(
     private router: Router,
@@ -30,10 +33,15 @@ export class HomePage {
     ) {
       this.categorias = this.dataBase.categorias;
       this.municipios = this.dataBase.municipios;
-
-      console.log(this.categorias)
+      this.lojas = this.dataBase.lojas;
     }
 
+    setOpen(isOpen: boolean, nomeLoja?: string) {
+      this.isModalOpen = isOpen;
+      if (nomeLoja){
+        this.loja = this.dataBase.buscarLoja(nomeLoja);
+      }
+    }
   
     listarLojasPorCategoria(categoria: Categoria){
       const params: NavigationExtras = {
@@ -51,6 +59,10 @@ export class HomePage {
         }
       }
       this.router.navigate(['/lojas'], params)
+    }
+
+    buscar(event:any){
+      this.textoBuscar = event.detail.value;
     }
 
 }
