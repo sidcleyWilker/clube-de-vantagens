@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LojasPageRoutingModule } from './lojas-routing.module';
 
 import { LojasPage } from './lojas.page';
-import { FiltroPipe } from '../pipes/filtro.pipe';
+import { FiltroModule } from '../pipes/filtro.module';
 
 @NgModule({
   imports: [
@@ -15,7 +15,8 @@ import { FiltroPipe } from '../pipes/filtro.pipe';
     FormsModule,
     IonicModule,
     LojasPageRoutingModule, 
+    FiltroModule
   ],
-  declarations: [LojasPage, FiltroPipe]
+  declarations: [LojasPage ]
 })
 export class LojasPageModule {}

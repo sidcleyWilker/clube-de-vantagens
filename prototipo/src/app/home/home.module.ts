@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HideHeaderDirective } from '../directives/hide-header.directive';
+import { FiltroModule } from '../pipes/filtro.module';
 
 
 @NgModule({
@@ -13,9 +14,10 @@ import { HideHeaderDirective } from '../directives/hide-header.directive';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    FiltroModule
   ],
-  declarations: [HomePage, HideHeaderDirective],
+  declarations: [HomePage, HideHeaderDirective, ],
   
 })
 export class HomePageModule {}
